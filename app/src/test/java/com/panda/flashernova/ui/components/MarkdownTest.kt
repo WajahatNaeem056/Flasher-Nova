@@ -33,7 +33,7 @@ class MarkdownTest {
 
         ---
 
-        See [release page](https://github.com/WajahatNaeem056/FlasherNova/releases/tag/v1.0.0).
+        See [release page](https://github.com/WajahatNaeem056/Flasher-Nova/releases/tag/v1.0.0).
     """.trimIndent()
 
     @Test

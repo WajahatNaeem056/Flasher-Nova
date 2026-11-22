@@ -26,7 +26,7 @@ import java.net.HttpURLConnection
 import java.net.URL
 
 interface GitHubApi {
-    @GET("repos/WajahatNaeem056/FlasherNova/releases/latest")
+    @GET("repos/WajahatNaeem056/Flasher-Nova/releases/latest")
     suspend fun getLatestRelease(): Response<AppUpdater.GitHubRelease>
 }
 
