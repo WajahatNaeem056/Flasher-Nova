@@ -144,8 +144,8 @@ private fun RowScope.NavigationBarTab(
             Text(
                 text = item.label,
                 color = content,
-                fontSize = 14.sp,
-                fontWeight = FontWeight.Medium,
+                fontSize = 15.sp,
+                fontWeight = FontWeight.Bold,
                 maxLines = 1,
                 softWrap = false,
                 overflow = TextOverflow.Clip,
