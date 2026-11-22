@@ -81,7 +81,7 @@ All operations have a confirmation dialog (with a fade-in animation), including:
 ./gradlew assembleRelease # Release build
 ```
 ## Credits
-- [Bacillusf](https://github.com/Bacillusf) - author of ReKernelFlasher, which this project is based on
+- [Bacillusf](https://github.com/Bacillusf) - author of ReKernelFlasher
 - [fatalcoder524](https://github.com/fatalcoder524/KernelFlasher) - KernelFlasher fork that ReKernelFlasher was built on
 - [capntrips](https://github.com/capntrips/KernelFlasher) - original author of KernelFlasher
 - [WajahatNaeem056](https://github.com/WajahatNaeem056) - maintainer of Flasher Nova
