@@ -1,0 +1,40 @@
+*.iml
+.gradle/
+.idea/
+.DS_Store
+build/
+/build
+app/build/
+app/release/
+local.properties
+captures/
+.externalNativeBuild/
+.cxx/
+*.bak
+*.log
+jq:Zone.Identifier
+model/
+!app/src/main/assets/model/
+*.jks
+keystore.properties
+
+# SSH Keys
+*.pub
+*.pem
+*.key
+id_*
+.ssh/
+
+# Environment
+.env
+.env.*
+
+# Credentials
+credentials
+*.cred
+*.secret
+
+# Outputs
+*.apk
+# RKPConfig renewal provisioning needs the embedded AOSP rkpdapp (if missing, it falls back to the one installed on the device)
+!app/src/main/assets/rkpdapp.apk

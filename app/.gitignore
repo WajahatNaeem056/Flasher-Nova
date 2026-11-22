@@ -1,0 +1,4 @@
+/build
+/release
+build.gradle.bak
+*.bak
