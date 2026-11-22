@@ -173,7 +173,7 @@ fun MiuixThemeProvider(
             scrim = Color(0x52000000),
             onSurface = Color(0xFFF2F2F2),
             navContainer = Color(0xE6161616),
-            selectedContainer = Color(0xFF3C3C3C),
+            selectedContainer = Color(0xFF333333),
         )
     } else {
         GlassTokens(
@@ -186,7 +186,7 @@ fun MiuixThemeProvider(
             scrim = Color(0x1A000000),
             onSurface = Color(0xFF111111),
             navContainer = Color(0xE6F3F3F3),
-            selectedContainer = Color(0xFFCCCCCC),
+            selectedContainer = Color(0xFFDCDCDC),
         )
     }
 
