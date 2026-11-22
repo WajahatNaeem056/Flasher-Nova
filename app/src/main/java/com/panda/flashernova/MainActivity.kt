@@ -103,6 +103,7 @@ import com.panda.flashernova.common.LanguageManager
 import com.panda.flashernova.ui.components.AnimatedConfirmDialog
 import com.panda.flashernova.ui.components.DialogButton
 import com.panda.flashernova.ui.components.GlassNavigationBar
+import com.panda.flashernova.ui.components.RebootMenuButton
 import com.panda.flashernova.ui.components.NavItem
 import com.panda.flashernova.ui.screens.RefreshableScreen
 import com.panda.flashernova.ui.screens.autobackup.AutoBackupContent
@@ -861,23 +862,7 @@ class MainActivity : ComponentActivity() {
                                 val isCurrentPage = page == mainPagerState.pagerState.settledPage
                                 when (page) {
                                     0 -> RefreshableScreen(mainViewModel, navController, swipeEnabled = true, bottomContentPadding = 120.dp, actions = {
-                                        val showRebootMenu = remember { mutableStateOf(false) }
-                                        Box {
-                                            IconButton(onClick = { showRebootMenu.value = true }) {
-                                                Icon(
-                                                    Icons.Outlined.PowerSettingsNew,
-                                                    contentDescription = "Reboot",
-                                                    tint = Color(0xFF64B5F6)
-                                                )
-                                            }
-                                            DropdownMenu(expanded = showRebootMenu.value, onDismissRequest = { showRebootMenu.value = false }) {
-                                                DropdownMenuItem(text = { Text(stringResource(R.string.reboot)) }, onClick = { showRebootMenu.value = false; rebootViewModel.showConfirm("") })
-                                                DropdownMenuItem(text = { Text(stringResource(R.string.reboot_recovery)) }, onClick = { showRebootMenu.value = false; rebootViewModel.showConfirm("recovery") })
-                                                DropdownMenuItem(text = { Text(stringResource(R.string.reboot_bootloader)) }, onClick = { showRebootMenu.value = false; rebootViewModel.showConfirm("bootloader") })
-                                                DropdownMenuItem(text = { Text(stringResource(R.string.reboot_download)) }, onClick = { showRebootMenu.value = false; rebootViewModel.showConfirm("download") })
-                                                DropdownMenuItem(text = { Text(stringResource(R.string.reboot_edl)) }, onClick = { showRebootMenu.value = false; rebootViewModel.showConfirm("edl") })
-                                            }
-                                        }
+                                        RebootMenuButton(onSelect = { mode -> rebootViewModel.showConfirm(mode) })
                                     }) {
                                         MainContent(mainViewModel, navController)
                                     }
