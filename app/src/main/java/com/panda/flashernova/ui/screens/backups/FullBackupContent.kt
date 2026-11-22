@@ -9,10 +9,10 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Folder
-import androidx.compose.material.icons.filled.PlayArrow
-import androidx.compose.material.icons.filled.Refresh
-import androidx.compose.material.icons.filled.Storage
+import androidx.compose.material.icons.outlined.Folder
+import androidx.compose.material.icons.outlined.PlayArrow
+import androidx.compose.material.icons.outlined.Refresh
+import androidx.compose.material.icons.outlined.Storage
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.MaterialTheme
@@ -119,7 +119,7 @@ fun ColumnScope.FullBackupContent(
             modifier = Modifier.fillMaxWidth(),
             singleLine = true,
             label = { Text("Custom backup directory") },
-            leadingIcon = { androidx.compose.material3.Icon(Icons.Filled.Folder, contentDescription = null) },
+            leadingIcon = { androidx.compose.material3.Icon(Icons.Outlined.Folder, contentDescription = null) },
             supportingText = { Text("Default: /sdcard/FlasherNova/backups/<model>_FullBackup") }
         )
         Spacer(Modifier.height(10.dp))
@@ -153,19 +153,19 @@ fun ColumnScope.FullBackupContent(
                 title = "Start full backup",
                 subtitle = summary?.let { "Needs about ${formatFullBackupBytes(it.estimatedBytes)} of free space; userdata / sdc skipped" }
                     ?: "Detect platform and partition size first",
-                leadingIcon = Icons.Filled.Storage,
+                leadingIcon = Icons.Outlined.Storage,
                 leadingColors = ListItemIconColors(
                     container = MaterialTheme.colorScheme.tertiaryContainer,
                     content = MaterialTheme.colorScheme.onTertiaryContainer
                 ),
-                trailingIcon = Icons.Filled.PlayArrow,
+                trailingIcon = Icons.Outlined.PlayArrow,
                 enabled = summary != null,
                 onClick = { showStartConfirm.value = true }
             )
             ListItem(
                 title = "Refresh partition info",
                 subtitle = "Recount partitions and estimated space usage",
-                leadingIcon = Icons.Filled.Refresh,
+                leadingIcon = Icons.Outlined.Refresh,
                 leadingColors = ListItemIconColors(
                     container = MaterialTheme.colorScheme.primaryContainer,
                     content = MaterialTheme.colorScheme.onPrimaryContainer

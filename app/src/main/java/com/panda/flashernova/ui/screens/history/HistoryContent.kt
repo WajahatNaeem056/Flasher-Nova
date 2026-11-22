@@ -41,7 +41,7 @@ import com.panda.flashernova.ui.components.ListItem
 import com.panda.flashernova.ui.components.ListItemIconColors
 import com.panda.flashernova.ui.theme.softShadow
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.DeleteSweep
+import androidx.compose.material.icons.outlined.DeleteSweep
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -123,7 +123,7 @@ fun ColumnScope.HistoryContent(
         ListItem(
             title = stringResource(R.string.clear_history),
             subtitle = "Clear all operation history",
-            leadingIcon = Icons.Filled.DeleteSweep,
+            leadingIcon = Icons.Outlined.DeleteSweep,
             leadingColors = ListItemIconColors(
                 container = MaterialTheme.colorScheme.errorContainer,
                 content = MaterialTheme.colorScheme.onErrorContainer

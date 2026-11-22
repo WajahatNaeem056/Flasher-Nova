@@ -4,12 +4,12 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.BugReport
-import androidx.compose.material.icons.filled.Download
-import androidx.compose.material.icons.filled.Memory
-import androidx.compose.material.icons.filled.PowerSettingsNew
-import androidx.compose.material.icons.filled.Restore
-import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.outlined.BugReport
+import androidx.compose.material.icons.outlined.Download
+import androidx.compose.material.icons.outlined.Memory
+import androidx.compose.material.icons.outlined.PowerSettingsNew
+import androidx.compose.material.icons.outlined.Restore
+import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
@@ -32,7 +32,7 @@ fun ColumnScope.RebootContent(
         ListItem(
             title = stringResource(R.string.reboot),
             subtitle = "Reboot to system",
-            leadingIcon = Icons.Filled.PowerSettingsNew,
+            leadingIcon = Icons.Outlined.PowerSettingsNew,
             leadingColors = ListItemIconColors(
                 container = MaterialTheme.colorScheme.primaryContainer,
                 content = MaterialTheme.colorScheme.onPrimaryContainer
@@ -42,7 +42,7 @@ fun ColumnScope.RebootContent(
         ListItem(
             title = stringResource(R.string.reboot_recovery),
             subtitle = "Reboot to recovery mode",
-            leadingIcon = Icons.Filled.Restore,
+            leadingIcon = Icons.Outlined.Restore,
             leadingColors = ListItemIconColors(
                 container = MaterialTheme.colorScheme.tertiaryContainer,
                 content = MaterialTheme.colorScheme.onTertiaryContainer
@@ -52,7 +52,7 @@ fun ColumnScope.RebootContent(
         ListItem(
             title = stringResource(R.string.reboot_bootloader),
             subtitle = "Reboot to Bootloader (fastboot)",
-            leadingIcon = Icons.Filled.Settings,
+            leadingIcon = Icons.Outlined.Settings,
             leadingColors = ListItemIconColors(
                 container = MaterialTheme.colorScheme.secondaryContainer,
                 content = MaterialTheme.colorScheme.onSecondaryContainer
@@ -62,7 +62,7 @@ fun ColumnScope.RebootContent(
         ListItem(
             title = stringResource(R.string.reboot_download),
             subtitle = "Reboot to Download mode",
-            leadingIcon = Icons.Filled.Download,
+            leadingIcon = Icons.Outlined.Download,
             leadingColors = ListItemIconColors(
                 container = MaterialTheme.colorScheme.surfaceVariant,
                 content = MaterialTheme.colorScheme.onSurfaceVariant
@@ -72,7 +72,7 @@ fun ColumnScope.RebootContent(
         ListItem(
             title = stringResource(R.string.reboot_edl),
             subtitle = "Reboot to emergency download mode",
-            leadingIcon = Icons.Filled.BugReport,
+            leadingIcon = Icons.Outlined.BugReport,
             leadingColors = ListItemIconColors(
                 container = MaterialTheme.colorScheme.errorContainer,
                 content = MaterialTheme.colorScheme.onErrorContainer

@@ -20,9 +20,9 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.filled.Backup
-import androidx.compose.material.icons.filled.ChevronRight
-import androidx.compose.material.icons.filled.Save
+import androidx.compose.material.icons.outlined.Backup
+import androidx.compose.material.icons.outlined.ChevronRight
+import androidx.compose.material.icons.outlined.Save
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.CheckboxDefaults
@@ -126,7 +126,7 @@ fun ColumnScope.SlotFlashContent(
                     style = MaterialTheme.typography.titleMedium
                 )
                 Spacer(Modifier.padding(6.dp))
-                Icon(Icons.Filled.ChevronRight, contentDescription = null, modifier = Modifier.size(20.dp))
+                Icon(Icons.Outlined.ChevronRight, contentDescription = null, modifier = Modifier.size(20.dp))
             }
         } else if (isFlashImage) {
             DataCard(stringResource(R.string.flash_partition_image))
@@ -166,7 +166,7 @@ fun ColumnScope.SlotFlashContent(
                 enabled = viewModel.backupPartitions.filter { it.value }.isNotEmpty(),
                 onClick = { showBackupConfirm.value = true }
             ) {
-                Icon(Icons.Filled.Backup, contentDescription = null, modifier = Modifier.size(20.dp))
+                Icon(Icons.Outlined.Backup, contentDescription = null, modifier = Modifier.size(20.dp))
                 Spacer(Modifier.padding(6.dp))
                 Text(stringResource(R.string.backup_now), style = MaterialTheme.typography.titleMedium)
             }
@@ -202,7 +202,7 @@ fun ColumnScope.SlotFlashContent(
                             contentPadding = androidx.compose.foundation.layout.PaddingValues(horizontal = 18.dp, vertical = 16.dp),
                             onClick = { viewModel.saveLog(context) }
                         ) {
-                            Icon(Icons.Filled.Save, contentDescription = null, modifier = Modifier.size(20.dp))
+                            Icon(Icons.Outlined.Save, contentDescription = null, modifier = Modifier.size(20.dp))
                             Spacer(Modifier.padding(6.dp))
                             Text(stringResource(R.string.save_ak3_log), style = MaterialTheme.typography.titleMedium)
                         }
@@ -224,7 +224,7 @@ fun ColumnScope.SlotFlashContent(
                                     }
                                 }
                             ) {
-                                Icon(Icons.Filled.Save, contentDescription = null, modifier = Modifier.size(20.dp))
+                                Icon(Icons.Outlined.Save, contentDescription = null, modifier = Modifier.size(20.dp))
                                 Spacer(Modifier.padding(6.dp))
                                 Text(stringResource(R.string.save_ak3_zip_as_backup), style = MaterialTheme.typography.titleMedium)
                             }

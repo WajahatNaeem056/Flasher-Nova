@@ -16,9 +16,9 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Check
-import androidx.compose.material.icons.filled.ExpandMore
-import androidx.compose.material.icons.filled.Language
+import androidx.compose.material.icons.outlined.Check
+import androidx.compose.material.icons.outlined.ExpandMore
+import androidx.compose.material.icons.outlined.Language
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -85,7 +85,7 @@ fun ColumnScope.LanguageSettingsContent(
                 contentAlignment = Alignment.Center
             ) {
                 Icon(
-                    imageVector = Icons.Filled.Language,
+                    imageVector = Icons.Outlined.Language,
                     contentDescription = null,
                     tint = MaterialTheme.colorScheme.onPrimaryContainer,
                     modifier = Modifier.size(22.dp)
@@ -108,7 +108,7 @@ fun ColumnScope.LanguageSettingsContent(
             }
             Box {
                 Icon(
-                    imageVector = Icons.Filled.ExpandMore,
+                    imageVector = Icons.Outlined.ExpandMore,
                     contentDescription = null,
                     tint = MaterialTheme.colorScheme.onSurfaceVariant,
                     modifier = Modifier.size(22.dp)
@@ -128,7 +128,7 @@ fun ColumnScope.LanguageSettingsContent(
                                         else -> "en"
                                     }
                                 ) {
-                                    Icon(Icons.Filled.Check, contentDescription = null,
+                                    Icon(Icons.Outlined.Check, contentDescription = null,
                                         tint = MaterialTheme.colorScheme.primary)
                                 } else {
                                     Spacer(Modifier.size(24.dp))

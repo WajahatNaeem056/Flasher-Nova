@@ -7,12 +7,12 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Backup
-import androidx.compose.material.icons.filled.Build
-import androidx.compose.material.icons.filled.History
-import androidx.compose.material.icons.filled.Info
-import androidx.compose.material.icons.filled.Restore
-import androidx.compose.material.icons.filled.Storage
+import androidx.compose.material.icons.outlined.Backup
+import androidx.compose.material.icons.outlined.Build
+import androidx.compose.material.icons.outlined.History
+import androidx.compose.material.icons.outlined.Info
+import androidx.compose.material.icons.outlined.Restore
+import androidx.compose.material.icons.outlined.Storage
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
@@ -52,7 +52,7 @@ fun FlashHomeContent(
             ListItem(
                 title = stringResource(R.string.flash),
                 subtitle = "Choose an AK3 / image / KernelSU driver to flash",
-                leadingIcon = Icons.Filled.Build,
+                leadingIcon = Icons.Outlined.Build,
                 leadingColors = ListItemIconColors(
                     container = MaterialTheme.colorScheme.primaryContainer,
                     content = MaterialTheme.colorScheme.onPrimaryContainer
@@ -62,7 +62,7 @@ fun FlashHomeContent(
             ListItem(
                 title = stringResource(R.string.backup),
                 subtitle = "Back up the current partition locally",
-                leadingIcon = Icons.Filled.Backup,
+                leadingIcon = Icons.Outlined.Backup,
                 leadingColors = ListItemIconColors(
                     container = MaterialTheme.colorScheme.tertiaryContainer,
                     content = MaterialTheme.colorScheme.onTertiaryContainer
@@ -75,7 +75,7 @@ fun FlashHomeContent(
             ListItem(
                 title = stringResource(R.string.restore),
                 subtitle = "Restore partitions from history",
-                leadingIcon = Icons.Filled.Restore,
+                leadingIcon = Icons.Outlined.Restore,
                 leadingColors = ListItemIconColors(
                     container = MaterialTheme.colorScheme.secondaryContainer,
                     content = MaterialTheme.colorScheme.onSecondaryContainer
@@ -85,7 +85,7 @@ fun FlashHomeContent(
             ListItem(
                 title = stringResource(R.string.check_kernel_version),
                 subtitle = "Extract the kernel version from the boot image",
-                leadingIcon = Icons.Filled.Info,
+                leadingIcon = Icons.Outlined.Info,
                 leadingColors = ListItemIconColors(
                     container = MaterialTheme.colorScheme.surfaceVariant,
                     content = MaterialTheme.colorScheme.onSurfaceVariant
@@ -114,7 +114,7 @@ fun FlashHomeContent(
                 ListItem(
                     title = stringResource(R.string.flash),
                     subtitle = "Flash to slot B",
-                    leadingIcon = Icons.Filled.Build,
+                    leadingIcon = Icons.Outlined.Build,
                     leadingColors = ListItemIconColors(
                         container = MaterialTheme.colorScheme.primaryContainer,
                         content = MaterialTheme.colorScheme.onPrimaryContainer
@@ -124,7 +124,7 @@ fun FlashHomeContent(
                 ListItem(
                     title = stringResource(R.string.backup),
                     subtitle = "Back up slot B",
-                    leadingIcon = Icons.Filled.Backup,
+                    leadingIcon = Icons.Outlined.Backup,
                     leadingColors = ListItemIconColors(
                         container = MaterialTheme.colorScheme.tertiaryContainer,
                         content = MaterialTheme.colorScheme.onTertiaryContainer
@@ -137,7 +137,7 @@ fun FlashHomeContent(
                 ListItem(
                     title = stringResource(R.string.restore),
                     subtitle = "Restore slot B from history",
-                    leadingIcon = Icons.Filled.Restore,
+                    leadingIcon = Icons.Outlined.Restore,
                     leadingColors = ListItemIconColors(
                         container = MaterialTheme.colorScheme.secondaryContainer,
                         content = MaterialTheme.colorScheme.onSecondaryContainer
@@ -147,7 +147,7 @@ fun FlashHomeContent(
                 ListItem(
                     title = stringResource(R.string.check_kernel_version),
                     subtitle = "Check the slot B kernel version",
-                    leadingIcon = Icons.Filled.Info,
+                    leadingIcon = Icons.Outlined.Info,
                     leadingColors = ListItemIconColors(
                         container = MaterialTheme.colorScheme.surfaceVariant,
                         content = MaterialTheme.colorScheme.onSurfaceVariant
@@ -164,7 +164,7 @@ fun FlashHomeContent(
     ListItem(
         title = stringResource(R.string.operation_history),
         subtitle = "View all flash / backup / reboot operations",
-        leadingIcon = Icons.Filled.History,
+        leadingIcon = Icons.Outlined.History,
         leadingColors = ListItemIconColors(
             container = MaterialTheme.colorScheme.surfaceVariant,
             content = MaterialTheme.colorScheme.onSurfaceVariant
@@ -177,24 +177,24 @@ fun FlashHomeContent(
 private fun VendorDlkmItems(viewModel: MainViewModel, context: android.content.Context) {
     if (viewModel.slotA.isVendorDlkmMounted) {
         ActionListItem(
-            icon = Icons.Filled.Storage,
+            icon = Icons.Outlined.Storage,
             title = stringResource(R.string.unmount_vendor_dlkm),
             onClick = { viewModel.slotA.unmountVendorDlkm(context) }
         )
     } else if (viewModel.slotA.isVendorDlkmMapped) {
         ActionListItem(
-            icon = Icons.Filled.Storage,
+            icon = Icons.Outlined.Storage,
             title = stringResource(R.string.mount_vendor_dlkm),
             onClick = { viewModel.slotA.mountVendorDlkm(context) }
         )
         ActionListItem(
-            icon = Icons.Filled.Storage,
+            icon = Icons.Outlined.Storage,
             title = stringResource(R.string.unmap_vendor_dlkm),
             onClick = { viewModel.slotA.unmapVendorDlkm(context) }
         )
     } else {
         ActionListItem(
-            icon = Icons.Filled.Storage,
+            icon = Icons.Outlined.Storage,
             title = stringResource(R.string.map_vendor_dlkm),
             onClick = { viewModel.slotA.mapVendorDlkm(context) }
         )

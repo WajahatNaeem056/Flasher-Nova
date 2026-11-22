@@ -22,13 +22,13 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.Send
-import androidx.compose.material.icons.filled.Build
-import androidx.compose.material.icons.filled.FolderOpen
-import androidx.compose.material.icons.filled.Inventory2
-import androidx.compose.material.icons.filled.Security
-import androidx.compose.material.icons.filled.Storage
-import androidx.compose.material.icons.filled.Usb
-import androidx.compose.material.icons.filled.Wifi
+import androidx.compose.material.icons.outlined.Build
+import androidx.compose.material.icons.outlined.FolderOpen
+import androidx.compose.material.icons.outlined.Inventory2
+import androidx.compose.material.icons.outlined.Security
+import androidx.compose.material.icons.outlined.Storage
+import androidx.compose.material.icons.outlined.Usb
+import androidx.compose.material.icons.outlined.Wifi
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
@@ -77,7 +77,7 @@ fun ColumnScope.ToolboxContent(
         ListItem(
             title = "Unpack",
             subtitle = "Payload-Dumper unpacking and unpack records",
-            leadingIcon = Icons.Filled.FolderOpen,
+            leadingIcon = Icons.Outlined.FolderOpen,
             leadingColors = ListItemIconColors(
                 container = MaterialTheme.colorScheme.primaryContainer,
                 content = MaterialTheme.colorScheme.onPrimaryContainer
@@ -90,7 +90,7 @@ fun ColumnScope.ToolboxContent(
         ListItem(
             title = "Full partition backup",
             subtitle = "Back up all partitions; records appear on the backup page",
-            leadingIcon = Icons.Filled.Storage,
+            leadingIcon = Icons.Outlined.Storage,
             leadingColors = ListItemIconColors(
                 container = MaterialTheme.colorScheme.tertiaryContainer,
                 content = MaterialTheme.colorScheme.onTertiaryContainer
@@ -103,7 +103,7 @@ fun ColumnScope.ToolboxContent(
         ListItem(
             title = "Fix RKP",
             subtitle = "Fix TEE/RKP issues on Snapdragon devices caused by unlocking the bootloader (experimental)",
-            leadingIcon = Icons.Filled.Build,
+            leadingIcon = Icons.Outlined.Build,
             leadingColors = ListItemIconColors(
                 container = MaterialTheme.colorScheme.errorContainer,
                 content = MaterialTheme.colorScheme.onErrorContainer
@@ -114,7 +114,7 @@ fun ColumnScope.ToolboxContent(
         ListItem(
             title = "RKPConfig",
             subtitle = "Configure remote key provisioning: read/apply properties, renew provisioning, view status",
-            leadingIcon = Icons.Filled.Security,
+            leadingIcon = Icons.Outlined.Security,
             leadingColors = ListItemIconColors(
                 container = MaterialTheme.colorScheme.secondaryContainer,
                 content = MaterialTheme.colorScheme.onSecondaryContainer
@@ -125,7 +125,7 @@ fun ColumnScope.ToolboxContent(
         ListItem(
             title = "Enable Qualcomm Diag Port",
             subtitle = "Enable the Snapdragon Diag debug port (QPST/QXDM)",
-            leadingIcon = Icons.Filled.Usb,
+            leadingIcon = Icons.Outlined.Usb,
             leadingColors = ListItemIconColors(
                 container = MaterialTheme.colorScheme.errorContainer,
                 content = MaterialTheme.colorScheme.onErrorContainer
@@ -234,7 +234,7 @@ private fun WirelessDebugCard() {
         Column(Modifier.padding(14.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Icon(
-                    Icons.Filled.Wifi,
+                    Icons.Outlined.Wifi,
                     contentDescription = null,
                     tint = MaterialTheme.colorScheme.primary,
                     modifier = Modifier.size(22.dp)
@@ -338,7 +338,7 @@ fun ColumnScope.UnpackHubContent(
         ListItem(
             title = "Unpack",
             subtitle = "Choose payload.bin and extract img partition files",
-            leadingIcon = Icons.Filled.FolderOpen,
+            leadingIcon = Icons.Outlined.FolderOpen,
             leadingColors = ListItemIconColors(
                 container = MaterialTheme.colorScheme.primaryContainer,
                 content = MaterialTheme.colorScheme.onPrimaryContainer
@@ -349,7 +349,7 @@ fun ColumnScope.UnpackHubContent(
         ListItem(
             title = "Unpack records",
             subtitle = "View unpacked img files",
-            leadingIcon = Icons.Filled.Inventory2,
+            leadingIcon = Icons.Outlined.Inventory2,
             leadingColors = ListItemIconColors(
                 container = MaterialTheme.colorScheme.secondaryContainer,
                 content = MaterialTheme.colorScheme.onSecondaryContainer

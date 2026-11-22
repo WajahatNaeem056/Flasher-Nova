@@ -31,8 +31,8 @@ import com.panda.flashernova.ui.components.ListItem
 import com.panda.flashernova.ui.components.ListItemIconColors
 import com.panda.flashernova.ui.theme.softShadow
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.AspectRatio
-import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.outlined.AspectRatio
+import androidx.compose.material.icons.outlined.Check
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -46,7 +46,7 @@ fun ColumnScope.AdvancedSettingsContent(
         ListItem(
             title = stringResource(R.string.dpi_scale),
             subtitle = "${(localScale * 100).toInt()}% — drag to adjust, tap to apply",
-            leadingIcon = Icons.Filled.AspectRatio,
+            leadingIcon = Icons.Outlined.AspectRatio,
             leadingColors = ListItemIconColors(
                 container = MaterialTheme.colorScheme.primaryContainer,
                 content = MaterialTheme.colorScheme.onPrimaryContainer
@@ -73,7 +73,7 @@ fun ColumnScope.AdvancedSettingsContent(
         ListItem(
             title = stringResource(R.string.apply),
             subtitle = "Apply the scale to the current session",
-            leadingIcon = Icons.Filled.Check,
+            leadingIcon = Icons.Outlined.Check,
             leadingColors = ListItemIconColors(
                 container = MaterialTheme.colorScheme.tertiaryContainer,
                 content = MaterialTheme.colorScheme.onTertiaryContainer

@@ -17,10 +17,10 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.CheckCircle
-import androidx.compose.material.icons.filled.Memory
-import androidx.compose.material.icons.filled.Security
-import androidx.compose.material.icons.filled.WarningAmber
+import androidx.compose.material.icons.outlined.CheckCircle
+import androidx.compose.material.icons.outlined.Memory
+import androidx.compose.material.icons.outlined.Security
+import androidx.compose.material.icons.outlined.WarningAmber
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -152,7 +152,7 @@ fun ColumnScope.RkpFixContent(navController: NavController) {
     if (page == 0) {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Spacer(Modifier.height(8.dp))
-            Icon(Icons.Filled.Security, null, Modifier.size(56.dp), tint = MaterialTheme.colorScheme.error)
+            Icon(Icons.Outlined.Security, null, Modifier.size(56.dp), tint = MaterialTheme.colorScheme.error)
             Spacer(Modifier.height(12.dp))
             Text("RKP Fix Tool", style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.Bold)
             Spacer(Modifier.height(12.dp))
@@ -234,7 +234,7 @@ fun ColumnScope.RkpFixContent(navController: NavController) {
                     shape = RoundedCornerShape(14.dp),
                     contentPadding = PaddingValues(vertical = 14.dp)
                 ) {
-                    Icon(Icons.Filled.CheckCircle, null, Modifier.size(20.dp))
+                    Icon(Icons.Outlined.CheckCircle, null, Modifier.size(20.dp))
                     Spacer(Modifier.width(8.dp))
                     Text("Done", style = MaterialTheme.typography.titleMedium)
                 }
@@ -313,7 +313,7 @@ private fun DeviceSelectDialog(
                                 .padding(8.dp)
                         ) {
                             Icon(
-                                imageVector = Icons.Filled.WarningAmber,
+                                imageVector = Icons.Outlined.WarningAmber,
                                 contentDescription = null,
                                 tint = MaterialTheme.colorScheme.onErrorContainer
                             )
@@ -335,14 +335,14 @@ private fun DeviceSelectDialog(
                     Spacer(Modifier.padding(14.dp))
 
                     SelectOptionRow(
-                        icon = Icons.Filled.Memory,
+                        icon = Icons.Outlined.Memory,
                         title = "For Qcom 8 Elite Gen 5 [Beta]",
                         subtitle = "Next-gen Snapdragon 8 Elite platform",
                         onClick = onSelectEliteGen5
                     )
                     Spacer(Modifier.height(10.dp))
                     SelectOptionRow(
-                        icon = Icons.Filled.Security,
+                        icon = Icons.Outlined.Security,
                         title = "Processors up to 8 Elite",
                         subtitle = "Snapdragon 8 Elite and earlier platforms",
                         onClick = onSelectLegacy

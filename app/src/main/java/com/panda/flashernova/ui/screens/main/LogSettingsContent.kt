@@ -4,9 +4,9 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Article
-import androidx.compose.material.icons.filled.BugReport
-import androidx.compose.material.icons.filled.Save
+import androidx.compose.material.icons.outlined.Article
+import androidx.compose.material.icons.outlined.BugReport
+import androidx.compose.material.icons.outlined.Save
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
@@ -31,7 +31,7 @@ fun ColumnScope.LogSettingsContent(
             ListItem(
                 title = stringResource(R.string.save_ramoops),
                 subtitle = "Save the kernel panic / oops log",
-                leadingIcon = Icons.Filled.BugReport,
+                leadingIcon = Icons.Outlined.BugReport,
                 leadingColors = ListItemIconColors(
                     container = MaterialTheme.colorScheme.errorContainer,
                     content = MaterialTheme.colorScheme.onErrorContainer
@@ -42,7 +42,7 @@ fun ColumnScope.LogSettingsContent(
         ListItem(
             title = stringResource(R.string.save_dmesg),
             subtitle = "Save the kernel ring buffer log",
-            leadingIcon = Icons.Filled.Save,
+            leadingIcon = Icons.Outlined.Save,
             leadingColors = ListItemIconColors(
                 container = MaterialTheme.colorScheme.primaryContainer,
                 content = MaterialTheme.colorScheme.onPrimaryContainer
@@ -52,7 +52,7 @@ fun ColumnScope.LogSettingsContent(
         ListItem(
             title = stringResource(R.string.save_logcat),
             subtitle = "Save the Android system log",
-            leadingIcon = Icons.Filled.Article,
+            leadingIcon = Icons.Outlined.Article,
             leadingColors = ListItemIconColors(
                 container = MaterialTheme.colorScheme.tertiaryContainer,
                 content = MaterialTheme.colorScheme.onTertiaryContainer

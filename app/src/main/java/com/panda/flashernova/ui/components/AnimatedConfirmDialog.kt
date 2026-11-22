@@ -18,7 +18,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.WarningAmber
+import androidx.compose.material.icons.outlined.WarningAmber
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -106,7 +106,7 @@ fun AnimatedConfirmDialog(
                                         .padding(8.dp)
                                 ) {
                                     Icon(
-                                        imageVector = Icons.Filled.WarningAmber,
+                                        imageVector = Icons.Outlined.WarningAmber,
                                         contentDescription = null,
                                         tint = if (destructive)
                                             MaterialTheme.colorScheme.onErrorContainer

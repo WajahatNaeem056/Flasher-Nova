@@ -49,13 +49,15 @@ import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Build
-import androidx.compose.material.icons.filled.Cloud
-import androidx.compose.material.icons.filled.Home
-import androidx.compose.material.icons.filled.List
-import androidx.compose.material.icons.filled.MoreVert
-import androidx.compose.material.icons.filled.PowerSettingsNew
-import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.outlined.Build
+import androidx.compose.material.icons.outlined.Backup
+import androidx.compose.material.icons.outlined.FlashOn
+import androidx.compose.material.icons.outlined.Cloud
+import androidx.compose.material.icons.outlined.Home
+import androidx.compose.material.icons.outlined.List
+import androidx.compose.material.icons.outlined.MoreVert
+import androidx.compose.material.icons.outlined.PowerSettingsNew
+import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -864,7 +866,7 @@ class MainActivity : ComponentActivity() {
                                         Box {
                                             IconButton(onClick = { showRebootMenu.value = true }) {
                                                 Icon(
-                                                    Icons.Filled.PowerSettingsNew,
+                                                    Icons.Outlined.PowerSettingsNew,
                                                     contentDescription = "Reboot",
                                                     tint = Color(0xFF64B5F6)
                                                 )
@@ -887,7 +889,7 @@ class MainActivity : ComponentActivity() {
                                         actions = {
                                             IconButton(onClick = { navController.navigate("repo") }) {
                                                 Icon(
-                                                    Icons.Filled.Cloud,
+                                                    Icons.Outlined.Cloud,
                                                     contentDescription = "GKI/OKI repository",
                                                     tint = MaterialTheme.colorScheme.onSurfaceVariant
                                                 )
@@ -1105,10 +1107,10 @@ class MainActivity : ComponentActivity() {
                                     GlassNavigationBar(
                                         modifier = Modifier.align(Alignment.BottomCenter),
                                         items = listOf(
-                                            NavItem("main", stringResource(R.string.tab_home), Icons.Filled.Home),
-                                            NavItem("flash", stringResource(R.string.tab_flash), Icons.Filled.Build),
-                                            NavItem("backups", stringResource(R.string.backups), Icons.Filled.List),
-                                            NavItem("settings", stringResource(R.string.tab_settings), Icons.Filled.Settings)
+                                            NavItem("main", stringResource(R.string.tab_home), Icons.Outlined.Home),
+                                            NavItem("flash", stringResource(R.string.tab_flash), Icons.Outlined.FlashOn),
+                                            NavItem("backups", stringResource(R.string.backups), Icons.Outlined.Backup),
+                                            NavItem("settings", stringResource(R.string.tab_settings), Icons.Outlined.Settings)
                                         ),
                                         currentRoute = selectedTabRoute,
                                         backdrop = floatingNavBackdrop,

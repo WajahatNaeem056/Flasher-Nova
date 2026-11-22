@@ -16,8 +16,8 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Close
-import androidx.compose.material.icons.filled.SystemUpdate
+import androidx.compose.material.icons.outlined.Close
+import androidx.compose.material.icons.outlined.SystemUpdate
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.HorizontalDivider
@@ -99,7 +99,7 @@ fun UpdateNotesDialog(
                         contentAlignment = Alignment.Center
                     ) {
                         Icon(
-                            Icons.Filled.SystemUpdate,
+                            Icons.Outlined.SystemUpdate,
                             contentDescription = null,
                             tint = MaterialTheme.colorScheme.onPrimaryContainer,
                             modifier = Modifier.height(20.dp)
@@ -119,7 +119,7 @@ fun UpdateNotesDialog(
                         )
                     }
                     IconButton(onClick = onDismiss) {
-                        Icon(Icons.Filled.Close, contentDescription = stringResource(R.string.repo_close))
+                        Icon(Icons.Outlined.Close, contentDescription = stringResource(R.string.repo_close))
                     }
                 }
 

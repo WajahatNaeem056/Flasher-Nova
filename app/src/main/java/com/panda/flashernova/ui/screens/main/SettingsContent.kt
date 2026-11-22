@@ -13,12 +13,12 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Backup
-import androidx.compose.material.icons.filled.Build
-import androidx.compose.material.icons.filled.Code
-import androidx.compose.material.icons.filled.Description
-import androidx.compose.material.icons.filled.Download
-import androidx.compose.material.icons.filled.Language
+import androidx.compose.material.icons.outlined.Backup
+import androidx.compose.material.icons.outlined.Build
+import androidx.compose.material.icons.outlined.Code
+import androidx.compose.material.icons.outlined.Description
+import androidx.compose.material.icons.outlined.Download
+import androidx.compose.material.icons.outlined.Language
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
@@ -59,7 +59,7 @@ fun ColumnScope.SettingsContent(
         ListItem(
             title = stringResource(R.string.check_for_updates),
             subtitle = stringResource(R.string.settings_check_update_subtitle),
-            leadingIcon = Icons.Filled.Download,
+            leadingIcon = Icons.Outlined.Download,
             leadingColors = ListItemIconColors(
                 container = MaterialTheme.colorScheme.primaryContainer,
                 content = MaterialTheme.colorScheme.onPrimaryContainer
@@ -204,7 +204,7 @@ fun ColumnScope.SettingsContent(
         ListItem(
             title = stringResource(R.string.auto_backup_settings),
             subtitle = stringResource(R.string.settings_auto_backup_subtitle),
-            leadingIcon = Icons.Filled.Backup,
+            leadingIcon = Icons.Outlined.Backup,
             leadingColors = ListItemIconColors(
                 container = MaterialTheme.colorScheme.primaryContainer,
                 content = MaterialTheme.colorScheme.onPrimaryContainer
@@ -214,7 +214,7 @@ fun ColumnScope.SettingsContent(
         ListItem(
             title = stringResource(R.string.language_settings),
             subtitle = stringResource(R.string.settings_language_subtitle),
-            leadingIcon = Icons.Filled.Language,
+            leadingIcon = Icons.Outlined.Language,
             leadingColors = ListItemIconColors(
                 container = MaterialTheme.colorScheme.tertiaryContainer,
                 content = MaterialTheme.colorScheme.onTertiaryContainer
@@ -224,7 +224,7 @@ fun ColumnScope.SettingsContent(
         ListItem(
             title = stringResource(R.string.log_settings),
             subtitle = stringResource(R.string.settings_log_subtitle),
-            leadingIcon = Icons.Filled.Description,
+            leadingIcon = Icons.Outlined.Description,
             leadingColors = ListItemIconColors(
                 container = MaterialTheme.colorScheme.secondaryContainer,
                 content = MaterialTheme.colorScheme.onSecondaryContainer
@@ -234,7 +234,7 @@ fun ColumnScope.SettingsContent(
         ListItem(
             title = stringResource(R.string.advanced_settings),
             subtitle = stringResource(R.string.settings_advanced_subtitle),
-            leadingIcon = Icons.Filled.Code,
+            leadingIcon = Icons.Outlined.Code,
             leadingColors = ListItemIconColors(
                 container = MaterialTheme.colorScheme.surfaceVariant,
                 content = MaterialTheme.colorScheme.onSurfaceVariant
@@ -244,7 +244,7 @@ fun ColumnScope.SettingsContent(
         ListItem(
             title = stringResource(R.string.toolbox_title),
             subtitle = stringResource(R.string.toolbox_subtitle),
-            leadingIcon = Icons.Filled.Build,
+            leadingIcon = Icons.Outlined.Build,
             leadingColors = ListItemIconColors(
                 container = MaterialTheme.colorScheme.tertiaryContainer,
                 content = MaterialTheme.colorScheme.onTertiaryContainer

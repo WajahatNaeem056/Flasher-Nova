@@ -18,11 +18,11 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Android
-import androidx.compose.material.icons.filled.CheckCircle
-import androidx.compose.material.icons.filled.Memory
-import androidx.compose.material.icons.filled.Security
-import androidx.compose.material.icons.filled.SystemUpdate
+import androidx.compose.material.icons.outlined.Android
+import androidx.compose.material.icons.outlined.CheckCircle
+import androidx.compose.material.icons.outlined.Memory
+import androidx.compose.material.icons.outlined.Security
+import androidx.compose.material.icons.outlined.SystemUpdate
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
@@ -71,14 +71,14 @@ fun ColumnScope.MainContent(
     ) {
         MiuixInfoTile(
             modifier = Modifier.weight(1f),
-            icon = Icons.Filled.Android,
+            icon = Icons.Outlined.Android,
             label = "Android",
             value = viewModel.androidVersion,
             accent = MaterialTheme.colorScheme.primary,
         )
         MiuixInfoTile(
             modifier = Modifier.weight(1f),
-            icon = Icons.Filled.Security,
+            icon = Icons.Outlined.Security,
             label = "Root",
             value = viewModel.rootManager.ifBlank { "Unknown" },
             accent = MaterialTheme.colorScheme.tertiary,
@@ -112,7 +112,7 @@ fun ColumnScope.MainContent(
                 contentAlignment = Alignment.Center,
             ) {
                 Icon(
-                    imageVector = Icons.Filled.Memory,
+                    imageVector = Icons.Outlined.Memory,
                     contentDescription = null,
                     tint = MaterialTheme.colorScheme.onPrimaryContainer,
                     modifier = Modifier.size(22.dp),
@@ -160,7 +160,7 @@ private fun UpdateBanner(viewModel: MainViewModel) {
                 contentAlignment = Alignment.Center,
             ) {
                 Icon(
-                    imageVector = Icons.Filled.SystemUpdate,
+                    imageVector = Icons.Outlined.SystemUpdate,
                     contentDescription = null,
                     tint = MaterialTheme.colorScheme.onPrimaryContainer,
                     modifier = Modifier.size(24.dp)
@@ -236,7 +236,7 @@ private fun RootStatusPanel(viewModel: MainViewModel) {
                 contentAlignment = Alignment.Center
             ) {
                 Icon(
-                    imageVector = Icons.Filled.CheckCircle,
+                    imageVector = Icons.Outlined.CheckCircle,
                     contentDescription = null,
                     tint = MaterialTheme.colorScheme.primary,
                     modifier = Modifier.size(34.dp)

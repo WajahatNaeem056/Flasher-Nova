@@ -21,8 +21,8 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ContentCopy
-import androidx.compose.material.icons.filled.DeleteSweep
+import androidx.compose.material.icons.outlined.ContentCopy
+import androidx.compose.material.icons.outlined.DeleteSweep
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -447,7 +447,7 @@ fun ColumnScope.RkpConfigContent(navController: NavController) {
                     )
                     IconButton(onClick = { copyLog() }) {
                         Icon(
-                            Icons.Filled.ContentCopy,
+                            Icons.Outlined.ContentCopy,
                             contentDescription = "Copy log",
                             tint = MaterialTheme.colorScheme.primary
                         )
@@ -457,7 +457,7 @@ fun ColumnScope.RkpConfigContent(navController: NavController) {
                         logger.log("Log cleared")
                     }) {
                         Icon(
-                            Icons.Filled.DeleteSweep,
+                            Icons.Outlined.DeleteSweep,
                             contentDescription = "Clear log",
                             tint = MaterialTheme.colorScheme.primary
                         )

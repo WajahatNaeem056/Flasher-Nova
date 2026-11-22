@@ -33,15 +33,15 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.filled.ArrowDropDown
-import androidx.compose.material.icons.filled.CheckCircle
-import androidx.compose.material.icons.filled.Close
-import androidx.compose.material.icons.filled.Cloud
-import androidx.compose.material.icons.filled.Download
-import androidx.compose.material.icons.filled.Info
-import androidx.compose.material.icons.filled.Refresh
-import androidx.compose.material.icons.filled.Search
-import androidx.compose.material.icons.filled.Star
+import androidx.compose.material.icons.outlined.ArrowDropDown
+import androidx.compose.material.icons.outlined.CheckCircle
+import androidx.compose.material.icons.outlined.Close
+import androidx.compose.material.icons.outlined.Cloud
+import androidx.compose.material.icons.outlined.Download
+import androidx.compose.material.icons.outlined.Info
+import androidx.compose.material.icons.outlined.Refresh
+import androidx.compose.material.icons.outlined.Search
+import androidx.compose.material.icons.outlined.Star
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
@@ -162,7 +162,7 @@ fun RepoContent(navController: NavController) {
                 actions = {
                     IconButton(onClick = {}) {
                         Icon(
-                            Icons.Filled.Cloud,
+                            Icons.Outlined.Cloud,
                             contentDescription = stringResource(R.string.repo_cloud),
                             tint = MaterialTheme.colorScheme.onSurfaceVariant
                         )
@@ -186,7 +186,7 @@ fun RepoContent(navController: NavController) {
                     value = viewModel.query,
                     onValueChange = { viewModel.updateQuery(it) },
                     modifier = Modifier.weight(1f),
-                    leadingIcon = { Icon(Icons.Filled.Search, contentDescription = stringResource(R.string.repo_search)) },
+                    leadingIcon = { Icon(Icons.Outlined.Search, contentDescription = stringResource(R.string.repo_search)) },
                     singleLine = true,
                     shape = RoundedCornerShape(18.dp)
                 )
@@ -202,7 +202,7 @@ fun RepoContent(navController: NavController) {
                             strokeWidth = 2.dp
                         )
                     } else {
-                        Icon(Icons.Filled.Refresh, contentDescription = stringResource(R.string.repo_refresh))
+                        Icon(Icons.Outlined.Refresh, contentDescription = stringResource(R.string.repo_refresh))
                     }
                 }
             }
@@ -441,7 +441,7 @@ private fun FilterDropdown(
                     modifier = Modifier.weight(1f)
                 )
                 Icon(
-                    Icons.Filled.ArrowDropDown,
+                    Icons.Outlined.ArrowDropDown,
                     contentDescription = null,
                     modifier = Modifier.size(14.dp),
                     tint = MaterialTheme.colorScheme.onSurfaceVariant
@@ -514,7 +514,7 @@ private fun RepoCard(
                 Spacer(Modifier.height(8.dp))
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     Icon(
-                        Icons.Filled.Star,
+                        Icons.Outlined.Star,
                         contentDescription = null,
                         tint = Color(0xFFFFB300),
                         modifier = Modifier.size(16.dp)
@@ -613,7 +613,7 @@ private fun RepoCard(
                         contentPadding = PaddingValues(horizontal = 12.dp, vertical = 8.dp)
                     ) {
                         Icon(
-                            Icons.Filled.Info,
+                            Icons.Outlined.Info,
                             contentDescription = stringResource(R.string.repo_info_title),
                             modifier = Modifier.size(18.dp)
                         )
@@ -627,7 +627,7 @@ private fun RepoCard(
                     contentPadding = PaddingValues(horizontal = 14.dp, vertical = 8.dp)
                 ) {
                     Icon(
-                        if (completed) Icons.Filled.CheckCircle else Icons.Filled.Download,
+                        if (completed) Icons.Outlined.CheckCircle else Icons.Outlined.Download,
                         contentDescription = null,
                         modifier = Modifier.size(18.dp)
                     )
@@ -705,7 +705,7 @@ private fun CommunityInfoDialog(
                         modifier = Modifier.weight(1f)
                     )
                     IconButton(onClick = onDismiss) {
-                        Icon(Icons.Filled.Close, contentDescription = stringResource(R.string.repo_close))
+                        Icon(Icons.Outlined.Close, contentDescription = stringResource(R.string.repo_close))
                     }
                 }
                 Text(
@@ -785,7 +785,7 @@ private fun CommunityInfoDialog(
                             )
                         ) {
                             Icon(
-                                Icons.Filled.Download,
+                                Icons.Outlined.Download,
                                 contentDescription = null,
                                 modifier = Modifier.size(16.dp)
                             )

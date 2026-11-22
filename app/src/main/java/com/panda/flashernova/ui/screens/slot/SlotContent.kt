@@ -8,11 +8,11 @@ import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Backup
-import androidx.compose.material.icons.filled.Build
-import androidx.compose.material.icons.filled.Info
-import androidx.compose.material.icons.filled.Restore
-import androidx.compose.material.icons.filled.Storage
+import androidx.compose.material.icons.outlined.Backup
+import androidx.compose.material.icons.outlined.Build
+import androidx.compose.material.icons.outlined.Info
+import androidx.compose.material.icons.outlined.Restore
+import androidx.compose.material.icons.outlined.Storage
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
@@ -55,7 +55,7 @@ fun ColumnScope.SlotContent(
             ListItem(
                 title = stringResource(R.string.flash),
                 subtitle = "Choose an AK3 / image / KernelSU driver",
-                leadingIcon = Icons.Filled.Build,
+                leadingIcon = Icons.Outlined.Build,
                 leadingColors = ListItemIconColors(
                     container = MaterialTheme.colorScheme.primaryContainer,
                     content = MaterialTheme.colorScheme.onPrimaryContainer
@@ -65,7 +65,7 @@ fun ColumnScope.SlotContent(
             ListItem(
                 title = stringResource(R.string.backup),
                 subtitle = "Back up the current slot locally",
-                leadingIcon = Icons.Filled.Backup,
+                leadingIcon = Icons.Outlined.Backup,
                 leadingColors = ListItemIconColors(
                     container = MaterialTheme.colorScheme.tertiaryContainer,
                     content = MaterialTheme.colorScheme.onTertiaryContainer
@@ -78,7 +78,7 @@ fun ColumnScope.SlotContent(
             ListItem(
                 title = stringResource(R.string.restore),
                 subtitle = "Restore from history",
-                leadingIcon = Icons.Filled.Restore,
+                leadingIcon = Icons.Outlined.Restore,
                 leadingColors = ListItemIconColors(
                     container = MaterialTheme.colorScheme.secondaryContainer,
                     content = MaterialTheme.colorScheme.onSecondaryContainer
@@ -88,7 +88,7 @@ fun ColumnScope.SlotContent(
             ListItem(
                 title = stringResource(R.string.check_kernel_version),
                 subtitle = "Extract the kernel version from the boot image",
-                leadingIcon = Icons.Filled.Info,
+                leadingIcon = Icons.Outlined.Info,
                 leadingColors = ListItemIconColors(
                     container = MaterialTheme.colorScheme.surfaceVariant,
                     content = MaterialTheme.colorScheme.onSurfaceVariant
@@ -113,7 +113,7 @@ private fun VendorDlkmItems(
     if (viewModel.isVendorDlkmMounted) {
         ListItem(
             title = stringResource(R.string.unmount_vendor_dlkm),
-            leadingIcon = Icons.Filled.Storage,
+            leadingIcon = Icons.Outlined.Storage,
             leadingColors = ListItemIconColors(
                 container = MaterialTheme.colorScheme.surfaceVariant,
                 content = MaterialTheme.colorScheme.onSurfaceVariant
@@ -123,7 +123,7 @@ private fun VendorDlkmItems(
     } else if (viewModel.isVendorDlkmMapped) {
         ListItem(
             title = stringResource(R.string.mount_vendor_dlkm),
-            leadingIcon = Icons.Filled.Storage,
+            leadingIcon = Icons.Outlined.Storage,
             leadingColors = ListItemIconColors(
                 container = MaterialTheme.colorScheme.surfaceVariant,
                 content = MaterialTheme.colorScheme.onSurfaceVariant
@@ -132,7 +132,7 @@ private fun VendorDlkmItems(
         )
         ListItem(
             title = stringResource(R.string.unmap_vendor_dlkm),
-            leadingIcon = Icons.Filled.Storage,
+            leadingIcon = Icons.Outlined.Storage,
             leadingColors = ListItemIconColors(
                 container = MaterialTheme.colorScheme.surfaceVariant,
                 content = MaterialTheme.colorScheme.onSurfaceVariant
@@ -142,7 +142,7 @@ private fun VendorDlkmItems(
     } else {
         ListItem(
             title = stringResource(R.string.map_vendor_dlkm),
-            leadingIcon = Icons.Filled.Storage,
+            leadingIcon = Icons.Outlined.Storage,
             leadingColors = ListItemIconColors(
                 container = MaterialTheme.colorScheme.surfaceVariant,
                 content = MaterialTheme.colorScheme.onSurfaceVariant

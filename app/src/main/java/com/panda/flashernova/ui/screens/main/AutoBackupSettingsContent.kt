@@ -19,9 +19,9 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.History
-import androidx.compose.material.icons.filled.Storage
-import androidx.compose.material.icons.filled.WarningAmber
+import androidx.compose.material.icons.outlined.History
+import androidx.compose.material.icons.outlined.Storage
+import androidx.compose.material.icons.outlined.WarningAmber
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -57,7 +57,7 @@ fun ColumnScope.AutoBackupSettingsContent(
         SettingRow(
             title = stringResource(R.string.auto_backup),
             subtitle = "Automatically dd-back up the target partition before flashing",
-            icon = Icons.Filled.Storage,
+            icon = Icons.Outlined.Storage,
             trailing = {
                 Switch(
                     checked = AutoBackupManager.isEnabled.value,
@@ -70,7 +70,7 @@ fun ColumnScope.AutoBackupSettingsContent(
             ListItem(
                 title = stringResource(R.string.view_autobackup_records),
                 subtitle = "View past auto backups",
-                leadingIcon = Icons.Filled.History,
+                leadingIcon = Icons.Outlined.History,
                 leadingColors = ListItemIconColors(
                     container = MaterialTheme.colorScheme.tertiaryContainer,
                     content = MaterialTheme.colorScheme.onTertiaryContainer
@@ -83,7 +83,7 @@ fun ColumnScope.AutoBackupSettingsContent(
             ListItem(
                 title = "Required permissions not granted",
                 subtitle = "The \"All files access\" permission is missing, so auto backup may not be able to access /sdcard. Tap to open system settings and grant it",
-                leadingIcon = Icons.Filled.WarningAmber,
+                leadingIcon = Icons.Outlined.WarningAmber,
                 leadingColors = ListItemIconColors(
                     container = MaterialTheme.colorScheme.errorContainer,
                     content = MaterialTheme.colorScheme.onErrorContainer

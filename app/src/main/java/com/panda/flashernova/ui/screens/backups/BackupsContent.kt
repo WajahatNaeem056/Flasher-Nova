@@ -8,8 +8,8 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Delete
-import androidx.compose.material.icons.filled.Sync
+import androidx.compose.material.icons.outlined.Delete
+import androidx.compose.material.icons.outlined.Sync
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.MaterialTheme
@@ -92,7 +92,7 @@ fun ColumnScope.BackupsContent(
             ListItem(
                 title = stringResource(R.string.delete),
                 subtitle = "Permanently delete this backup",
-                leadingIcon = Icons.Filled.Delete,
+                leadingIcon = Icons.Outlined.Delete,
                 leadingColors = ListItemIconColors(
                     container = MaterialTheme.colorScheme.errorContainer,
                     content = MaterialTheme.colorScheme.onErrorContainer
@@ -121,7 +121,7 @@ fun ColumnScope.BackupsContent(
             ListItem(
                 title = stringResource(R.string.migrate),
                 subtitle = "Migrate backup data from older versions",
-                leadingIcon = Icons.Filled.Sync,
+                leadingIcon = Icons.Outlined.Sync,
                 leadingColors = ListItemIconColors(
                     container = MaterialTheme.colorScheme.primaryContainer,
                     content = MaterialTheme.colorScheme.onPrimaryContainer

@@ -11,8 +11,8 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.CheckCircle
-import androidx.compose.material.icons.filled.Usb
+import androidx.compose.material.icons.outlined.CheckCircle
+import androidx.compose.material.icons.outlined.Usb
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -90,7 +90,7 @@ fun ColumnScope.DiagPortContent(navController: NavController) {
     if (page == 0) {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Spacer(Modifier.height(8.dp))
-            Icon(Icons.Filled.Usb, null, Modifier.size(56.dp), tint = MaterialTheme.colorScheme.error)
+            Icon(Icons.Outlined.Usb, null, Modifier.size(56.dp), tint = MaterialTheme.colorScheme.error)
             Spacer(Modifier.height(12.dp))
             Text("Enable Qualcomm Diag Port", style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.Bold)
             Spacer(Modifier.height(12.dp))
@@ -172,7 +172,7 @@ fun ColumnScope.DiagPortContent(navController: NavController) {
                     shape = RoundedCornerShape(14.dp),
                     contentPadding = PaddingValues(vertical = 14.dp)
                 ) {
-                    Icon(Icons.Filled.CheckCircle, null, Modifier.size(20.dp))
+                    Icon(Icons.Outlined.CheckCircle, null, Modifier.size(20.dp))
                     Spacer(Modifier.width(8.dp))
                     Text("Done", style = MaterialTheme.typography.titleMedium)
                 }
