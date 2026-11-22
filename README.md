@@ -2,7 +2,7 @@
 An Android kernel flashing tool that lets you flash, back up and restore Android kernel images on rooted devices.
 Developed on top of [KernelFlasher](https://github.com/fatalcoder524/KernelFlasher) and maintained by [WajahatNaeem056](https://github.com/WajahatNaeem056).
 <!-- Floating SVG icon on the right; width controls the icon size, align="right" makes the text wrap around it -->
-[![Latest release](https://img.shields.io/github/v/release/WajahatNaeem056/FlasherNova?label=Release&logo=github)](https://github.com/WajahatNaeem056/FlasherNova/releases)
+[![Latest release](https://img.shields.io/github/v/release/WajahatNaeem056/Flasher-Nova?label=Release&logo=github)](https://github.com/WajahatNaeem056/Flasher-Nova/releases)
 [![License: GPLv3.0](https://img.shields.io/badge/License-GPLv3.0-orange?logo=gnu)](https://www.gnu.org/licenses/quick-guide-gplv3.html)
 <img align="right" width="100" src="./docs/RI.svg" alt="Flasher Nova Logo" style="display:block; margin: 0; vertical-align: bottom;">
 
