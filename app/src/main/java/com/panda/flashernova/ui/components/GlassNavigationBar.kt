@@ -2,7 +2,6 @@ package com.panda.flashernova.ui.components
 
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.animateContentSize
-import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
@@ -14,6 +13,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.asPaddingValues
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBars
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -73,16 +73,15 @@ fun GlassNavigationBar(
         Surface(
             modifier = Modifier.fillMaxWidth(),
             shape = RoundedCornerShape(50),
-            color = MaterialTheme.colorScheme.surfaceVariant,
+            color = MaterialTheme.colorScheme.surfaceContainerHigh,
             tonalElevation = 0.dp,
-            shadowElevation = 0.dp,
-            border = BorderStroke(0.5.dp, MaterialTheme.colorScheme.outlineVariant),
+            shadowElevation = 6.dp,
         ) {
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = 8.dp, vertical = 8.dp),
-                horizontalArrangement = Arrangement.SpaceEvenly,
+                    .padding(horizontal = 6.dp, vertical = 6.dp),
+                horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically,
             ) {
                 items.forEachIndexed { index, item ->
@@ -121,16 +120,17 @@ private fun RowScope.NavigationBarTab(
 
     Row(
         modifier = Modifier
+            .animateContentSize()
             .clip(RoundedCornerShape(50))
             .background(container)
-            .animateContentSize()
             .clickable(
                 interactionSource = remember { MutableInteractionSource() },
                 indication = null,
                 role = Role.Tab,
                 onClick = onClick
             )
-            .padding(horizontal = if (selected) 20.dp else 16.dp, vertical = 12.dp),
+            .height(48.dp)
+            .padding(horizontal = if (selected) 20.dp else 16.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
         Icon(

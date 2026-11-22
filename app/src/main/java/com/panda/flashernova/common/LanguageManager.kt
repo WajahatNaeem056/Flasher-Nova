@@ -22,7 +22,7 @@ object LanguageManager {
     }
 
     fun getCurrentLanguage(): String {
-        return prefs?.getString(KEY_LANGUAGE, "en") ?: "en"
+        return "en"
     }
 
     fun setLanguage(language: String, activity: Activity) {
@@ -33,14 +33,7 @@ object LanguageManager {
     }
 
     fun applyContextLocale(context: Context): Context {
-        val language = getCurrentLanguage()
-        val tag = when (language) {
-            "en" -> "en"
-            "zh-TW" -> "zh-TW"
-            "zh-HK" -> "zh-HK"
-            else -> "en"
-        }
-        val locale = Locale.forLanguageTag(tag)
+        val locale = Locale.forLanguageTag("en")
         Locale.setDefault(locale)
         val config = Configuration(context.resources.configuration)
         config.setLocale(locale)

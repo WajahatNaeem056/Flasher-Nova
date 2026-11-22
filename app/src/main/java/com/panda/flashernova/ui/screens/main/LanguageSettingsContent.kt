@@ -48,17 +48,8 @@ fun ColumnScope.LanguageSettingsContent(
     val activity = context as Activity
     var expanded by remember { mutableStateOf(false) }
     val currentLang = LanguageManager.getCurrentLanguage()
-    val display = when (currentLang) {
-        "en" -> "English"
-        "zh-TW" -> "Traditional Chinese (Taiwan)"
-        "zh-HK" -> "Traditional Chinese (Hong Kong)"
-        "zh-CN" -> "Simplified Chinese"
-        else -> "English"
-    }
+    val display = "English"
     val options = listOf(
-        Triple("zh-CN", "Simplified Chinese", true),
-        Triple("zh-HK", "Traditional Chinese (Hong Kong)", false),
-        Triple("zh-TW", "Traditional Chinese (Taiwan)", false),
         Triple("en", "English", false)
     )
 
@@ -121,13 +112,7 @@ fun ColumnScope.LanguageSettingsContent(
                         DropdownMenuItem(
                             text = { Text(label) },
                             leadingIcon = {
-                                if (code == when (currentLang) {
-                                        "zh-CN" -> "zh-CN"
-                                        "zh-HK" -> "zh-HK"
-                                        "zh-TW" -> "zh-TW"
-                                        else -> "en"
-                                    }
-                                ) {
+                                if (code == "en") {
                                     Icon(Icons.Outlined.Check, contentDescription = null,
                                         tint = MaterialTheme.colorScheme.primary)
                                 } else {

@@ -50,8 +50,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Build
-import androidx.compose.material.icons.outlined.Backup
-import androidx.compose.material.icons.outlined.FlashOn
+import androidx.compose.material.icons.outlined.Inventory2
 import androidx.compose.material.icons.outlined.Cloud
 import androidx.compose.material.icons.outlined.Home
 import androidx.compose.material.icons.outlined.List
@@ -1108,8 +1107,8 @@ class MainActivity : ComponentActivity() {
                                         modifier = Modifier.align(Alignment.BottomCenter),
                                         items = listOf(
                                             NavItem("main", stringResource(R.string.tab_home), Icons.Outlined.Home),
-                                            NavItem("flash", stringResource(R.string.tab_flash), Icons.Outlined.FlashOn),
-                                            NavItem("backups", stringResource(R.string.backups), Icons.Outlined.Backup),
+                                            NavItem("flash", stringResource(R.string.tab_flash), Icons.Outlined.Build),
+                                            NavItem("backups", stringResource(R.string.backups), Icons.Outlined.Inventory2),
                                             NavItem("settings", stringResource(R.string.tab_settings), Icons.Outlined.Settings)
                                         ),
                                         currentRoute = selectedTabRoute,
